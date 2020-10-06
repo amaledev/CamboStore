@@ -14,17 +14,9 @@ public class HomeController {
     ProductDao productDao = new ProductDao();
 
     @RequestMapping("/")
-    public String home(){
-
-        return "home";
-    }
-
-    @RequestMapping("/productList")
-    public String getProducts(Model model){
+    public String home(Model model){
         List<Product> productList = productDao.getProductList();
         model.addAttribute("products", productList);
-        return "productList";
-
-
+        return "home";
     }
 }

@@ -31,11 +31,32 @@ public class ProductDao {
         product2.setUnitInStock(20);
         product2.setProductManufacturer("Apple");
 
+        Product product3 = new Product();
+        product3.setProductName("Samsung Galaxy s6");
+        product3.setProductCategory("Samsung");
+        product3.setProductPrice(1200.0);
+        product3.setProductDescription("This is the new Samsung Galaxy");
+        product3.setProductCondition("New Arrival");
+        product3.setProductStatus("Active");
+        product3.setUnitInStock(20);
+        product3.setProductManufacturer("Samsung");
+
+        Product product4 = new Product();
+        product4.setProductName("LG G6");
+        product4.setProductCategory("LG");
+        product4.setProductPrice(1000.0);
+        product4.setProductDescription("This is the new LG");
+        product4.setProductCondition("New Arrival");
+        product4.setProductStatus("Active");
+        product4.setUnitInStock(20);
+        product4.setProductManufacturer("LG");
+
         productList = new ArrayList<Product>();
         productList.add(product1);
         productList.add(product2);
+        productList.add(product3);
+        productList.add(product4);
         return productList;
-
     }
 
 
