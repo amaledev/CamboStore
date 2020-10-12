@@ -53,9 +53,9 @@
                 <td>${product.productName}</td>
                 <td>${product.productCategory}</td>
                 <td>${product.productCondition}</td>
-                <td>${product.productPrice}</td>
+                <td>${product.productPrice} USD</td>
                 <td>
-                    <a href="<c:url value="/viewProduct"/> ">
+                    <a href="<c:url value="/viewProduct/${product.productId}"/> ">
                         <span class="glyphicon glyphicon-info-sign"></span>
                     </a>
                 </td>

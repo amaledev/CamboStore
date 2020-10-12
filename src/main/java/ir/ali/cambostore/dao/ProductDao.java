@@ -2,6 +2,7 @@ package ir.ali.cambostore.dao;
 
 import ir.ali.cambostore.model.Product;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +13,7 @@ public class ProductDao {
 
     public List<Product> getProductList(){
         Product product1 = new Product();
+        product1.setProductId("ID01");
         product1.setProductName("iphone7plus");
         product1.setProductCategory("iphone");
         product1.setProductPrice(1200.0);
@@ -22,6 +24,7 @@ public class ProductDao {
         product1.setProductManufacturer("Apple");
 
         Product product2 = new Product();
+        product2.setProductId("ID02");
         product2.setProductName("iphone7plus");
         product2.setProductCategory("iphone");
         product2.setProductPrice(1200.0);
@@ -32,6 +35,7 @@ public class ProductDao {
         product2.setProductManufacturer("Apple");
 
         Product product3 = new Product();
+        product3.setProductId("ID03");
         product3.setProductName("Samsung Galaxy s6");
         product3.setProductCategory("Samsung");
         product3.setProductPrice(1200.0);
@@ -42,6 +46,7 @@ public class ProductDao {
         product3.setProductManufacturer("Samsung");
 
         Product product4 = new Product();
+        product4.setProductId("ID04");
         product4.setProductName("LG G6");
         product4.setProductCategory("LG");
         product4.setProductPrice(1000.0);
@@ -59,5 +64,12 @@ public class ProductDao {
         return productList;
     }
 
-
+    public Product getProductById(String productId) throws IOException {
+        for (Product product : getProductList()){
+            if (product.getProductId().equals(productId)) {
+                return product;
+            }
+        }
+        throw new IOException("No product found.");
+    }
 }
