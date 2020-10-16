@@ -1,21 +1,44 @@
 package ir.ali.cambostore.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "product" )
 public class Product {
-    private String productId;
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name = "id")
+    private int productId;
+
+    @Column(name = "product_name")
     private String productName;
+
+    @Column(name = "product_category")
     private String productCategory;
+
+    @Column(name = "product_description")
     private String productDescription;
+
+    @Column(name = "product_condition")
     private String productCondition;
+
+    @Column(name = "product_status")
     private String productStatus;
+
+    @Column(name = "product_manufacturer")
     private String productManufacturer;
+
+    @Column(name = "product_price")
     private Double productPrice;
+
+    @Column(name = "unit_in_stock")
     private int unitInStock;
 
-    public String getProductId() {
+    public int getProductId() {
         return productId;
     }
 
-    public void setProductId(String productId) {
+    public void setProductId(int productId) {
         this.productId = productId;
     }
 
