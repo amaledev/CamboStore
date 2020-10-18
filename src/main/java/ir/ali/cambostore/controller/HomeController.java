@@ -25,10 +25,32 @@ public class HomeController {
     }
 
     @RequestMapping("/viewProduct/{productId}")
-    public String viewProduct(@PathVariable String productId, Model model) throws IOException {
+    public String viewProduct(@PathVariable int productId, Model model) throws IOException {
 
         Product product = productDao.getProductById(productId);
         model.addAttribute(product);
         return "viewProduct";
+    }
+
+    @RequestMapping("/admin")
+    public String adminPage(){
+        return "admin";
+    }
+
+    @RequestMapping("/admin/productInventory")
+    public String productInventory(Model model){
+        List<Product> products = productDao.grtAllProducts();
+        model.addAttribute("products", products);
+        return "productInventory";
+    }
+
+    @RequestMapping("/admin/productInventory/addProduct")
+    public String addProduct(Model model){
+        Product product = new Product();
+        product.setProductCategory("iPhone");
+        product.setProductCondition("new");
+        product.setProductStatus("active");
+        model.addAttribute("product", product);
+        return "addProduct";
     }
 }

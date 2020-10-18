@@ -16,6 +16,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Creative - Start Bootstrap Theme</title>
+
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="<c:url value="/resources/assets/img/favicon.ico"/> " />
     <!-- Font Awesome icons (free version)-->
@@ -39,7 +40,7 @@
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<c:url value="/"/>#about">About</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<c:url value="/"/>#services">Products</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<c:url value="/"/>#portfolio">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<c:url value="/"/>#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
             </ul>
         </div>
     </div>
