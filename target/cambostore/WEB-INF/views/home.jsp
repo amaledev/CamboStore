@@ -56,7 +56,7 @@
                 <td>${product.productPrice} USD</td>
                 <td>
                     <a href="<c:url value="/viewProduct/${product.productId}"/> ">
-                        <span class="glyphicon glyphicon-info-sign"></span>
+                        <i class="fas fa-info-circle"></i>
                     </a>
                 </td>
             </tr>
